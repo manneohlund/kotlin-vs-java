@@ -51,11 +51,15 @@ Kotlin fixes a series of issues that Java suffers from
 
 ### Main example
 
+#### Kotlin
+
 ```Kotlin
 fun main(args: Array<String>) {
   println("Hello, ${args[0]}")
 }
 ```
+
+#### Java
 
 ```java
 public static final void main(String[] args) {
