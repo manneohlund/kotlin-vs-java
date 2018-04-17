@@ -1,4 +1,4 @@
-![Kotlin vs Java](https://s-media-cache-ak0.pinimg.com/originals/0c/dd/7c/0cdd7c35f47da9351d02488cc0703425.png)
+![Kotlin vs Java](https://github.com/manneohlund/kotlin-vs-java/blob/master/assets/kotlin-vs-java.png)
 
 An language feature battle
 
