@@ -7,6 +7,8 @@ An language feature battle
 ### Why Kotlin?
 Kotlin fixes a series of issues that Java suffers from
 
+@ul
+
 - Null references are controlled by the type system.
 - No raw types
 - Arrays in Kotlin are invariant
@@ -14,9 +16,13 @@ Kotlin fixes a series of issues that Java suffers from
 - Use-site variance without wildcards
 - Kotlin does not have checked exceptions
 
+@ulend
+
 ---
 
 ### What Kotlin has that Java does not
+
+@ul
 
 - Null-safety
 - Lambda expressions + Inline functions = performant custom control structures
@@ -36,9 +42,13 @@ Kotlin fixes a series of issues that Java suffers from
 - Separate interfaces for read-only and mutable collections
 - Coroutines
 
+@ulend
+
 ---
 
-### What
+### What Java has that Kotlin does not
+
+@ul
 
 - Checked exceptions
 - Primitive types that are not classes
@@ -47,9 +57,11 @@ Kotlin fixes a series of issues that Java suffers from
 - Wildcard-types
 - Ternary-operator a ? b : c
 
+@ulend
+
 ---
 
-### Main example
+### Syntax
 
 #### Kotlin
 
