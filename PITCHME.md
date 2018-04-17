@@ -63,7 +63,7 @@ Kotlin fixes a series of issues that Java suffers from
 
 ### Syntax
 
-#### Kotlin
+Kotlin
 
 ```Kotlin
 fun main(args: Array<String>) {
@@ -71,7 +71,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-#### Java
+Java
 
 ```java
 public static final void main(String[] args) {
