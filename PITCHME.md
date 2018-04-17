@@ -16,16 +16,18 @@ An language feature battle
 
 ---
 
-```mermaid
-graph TB
-C(Coordinator) -- Creates --> A(Activity)
-A -- Creates --> F(Fragment)
-F -- Invokes --> N(Networking)
-N -- Callback model --> F
-F -- Sets model --> P
-F -- Gets P data --> P
-F -. has .-> P(Presenter)
-P -. has .-> M(Model)
+### Some code
+
+```Kotlin
+fun main(args: Array<String>) {
+  println("Hello, ${args[0]}")
+}
 ```
 
----
+```java
+public static final void main(String[] args) {
+  System.out.println(String.format("Hello, %s", args[0]))
+}
+```
+
+### [Lets see some code online](https://try.kotlinlang.org/#/Examples/Hello,%20world!/Reading%20a%20name%20from%20the%20command%20line/Reading%20a%20name%20from%20the%20command%20line.kt)
