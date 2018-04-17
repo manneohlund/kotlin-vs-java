@@ -61,7 +61,7 @@ Kotlin fixes a series of issues that Java suffers from
 
 ---
 
-###### Syntax
+@title[Syntax]
 
 Kotlin
 
