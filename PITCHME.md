@@ -174,6 +174,8 @@ b?.length
 
 ### Elvis operator
 
+?:
+
 ```Kotlin
 val name = bob?.department?.head?.name ?: "Unknown"
 ```
