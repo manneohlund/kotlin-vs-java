@@ -29,9 +29,9 @@ Kotlin fixes a series of issues that Java suffers from
 
 - Null-safety
 - Smart casts
+- Singletons
 - Extension functions
 - String templates
-- Singletons
 - Properties
 - Primary constructors
 - Range expressions
@@ -109,6 +109,8 @@ var name: String? = null
 // Lateinit
 lateinit var name: String // Assign later in code, can't be null
 ```
+
+[Basic types](https://kotlinlang.org/docs/reference/basic-types.html)
 
 ---
 
@@ -214,24 +216,24 @@ fun demo(x: Any) {
 
 ### Singletons & Extensions
 
-MyClass.kt
+MySingleton.kt
 ```Kotlin
-object MyClass { // Note object
+object MySingleton { // Note object
     fun add(number: Int): Int = 10 + number
 }
 ```
 
-MyClass+Extensions.kt
+MySingleton+Extensions.kt
 ```Kotlin
-fun MyClass.multiply(multiplicand: Int, multiplicator: Int) -> Int {
+fun MySingleton.multiply(multiplicand: Int, multiplicator: Int) -> Int {
     return multiplicand * multiplicator
 }
 ```
 
 Usage
 ```Kotlin
-val sum = MyClass.add(2)
-val product = MyClass.multiply(1, 2)
+val sum = MySingleton.add(2)
+val product = MySingleton.multiply(1, 2)
 ```
 
 ---
