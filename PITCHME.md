@@ -23,12 +23,10 @@ Kotlin fixes a series of issues that Java suffers from
 
 ---
 
-### What Kotlin has that Java does not
+### What Kotlin has that Java does not 🍒
 
 @ul
 
-- Properties
-- Primary constructors
 - Null-safety
 - Smart casts
 - Singletons
