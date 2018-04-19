@@ -125,12 +125,29 @@ static final File file = new File()
 
 ---
 
-@title[Null safe]
+@title[Null safe quote]
 
-> "I call it my billion-dollar mistake. It was the invention of the null reference in 1965." // Sir Tony Hoare
+> "I call it my billion-dollar mistake. It was the invention of the null reference in 1965."
+Sir Tony Hoare
 
+---
 
+### Null safe
 
+```Kotlin
+var a: String = "abc"
+a = null // compilation error
+
+var b: String? = "abc"
+b = null // ok
+```
+
+Usage
+
+```Kotlin
+val l = a.length // ok
+val l = b.length // error: variable 'b' can be null
+```
 
 ---
 
