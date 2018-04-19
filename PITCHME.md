@@ -162,19 +162,8 @@ Explicitly check if b is null
 
 @ul
 
-```Kotlin
-val l = if (b != null) b.length else -1
-```
-
-```Kotlin
-val l = b?.length ?: -1
-```
-
-Safe call operator `?.`
-
-```Kotlin
-val l = b?.length
-```
+- Kotlin     | val l = if (b != null) b.length else -1
+- Kotlin     | val l = b?.length
 
 @ulend
 
