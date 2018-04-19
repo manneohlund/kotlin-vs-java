@@ -151,7 +151,23 @@ val l = b.length // error: variable 'b' can be null
 
 ---
 
-@title[Generics]
+### Checking for null in conditions
+
+First, you can explicitly check if b is null, and handle the two options separately.
+
+```Kotlin
+val l = if (b != null) b.length else -1
+```
+
+Your second option is the safe call operator, written ?.
+
+```Kotlin
+val l = b?.length
+```
+
+---
+
+### Generics
 
 ```kotlin
 inline fun <reified T : Any> loadStyle(inputStream: InputStream): T {
