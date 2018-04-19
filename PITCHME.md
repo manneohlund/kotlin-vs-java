@@ -358,17 +358,77 @@ We frequently create classes whose main purpose is to hold data.
 In such a class some standard functionality and utility functions are often mechanically derivable from the data.
 
 ```Kotlin
-data class User(val name: String, val age: Int)
+data class Person(val name: String, val age: Int)
 ```
+
+equals(), hashCode(), toString(), copy()
 
 +++
 
 ### Data Classes and Destructuring Declarations
 
 ```Kotlin
-val jane = User("Jane", 35) 
+val jane = Person("Jane", 35) 
 val (name, age) = jane
 println("$name, $age years of age") // prints "Jane, 35 years of age"
+```
+
++++
+
+### Java POJO equivalent to Kotlin data class
+
+```kotlin
+public class Person {
+   private String name;
+   private int age = 0;
+
+   public Person(String name, int age) {
+       this.name = name;
+       this.age = age;
+   }
+
+   public String getName() {
+       return name;
+   }
+
+   public void setName(String name) {
+       this.name = name;
+   }
+
+   public int getAge() {
+       return age;
+   }
+
+   public void setAge(int age) {
+       this.age = age;
+   }
+
+   @Override
+   public boolean equals(Object o) {
+       if (this == o) return true;
+       if (o == null || getClass() != o.getClass()) return false;
+
+       Person person = (Person) o;
+
+       if (name != null ? !name.equals(person.name) : person.name != null) return false;
+       if (age != 0 ? age != person.age : person.age != 0) return false;
+   }
+
+   @Override
+   public int hashCode() {
+       int result = name != null ? name.hashCode() : 0;
+       result = 31 * result + age;
+       return result;
+   }
+
+   @Override
+   public String toString() {
+       return "Person{" +
+               "name='" + name + '\'' +
+               ", age='" + age + '\'' +
+               '}';
+   }
+}
 ```
 
 ---
