@@ -81,7 +81,7 @@ Kotlin fixes a series of issues that Java suffers from
 
 Kotlin
 
-```Kotlin
+```kotlin
 fun main(args: Array<String>) {
   println("Hello, ${args[0]}")
 }
@@ -101,7 +101,7 @@ public static final void main(String[] args) {
 
 val & var [Properties](https://kotlinlang.org/docs/reference/properties.html)
 
-```Kotlin
+```kotlin
 // Explicit
 const val hello: String = "World" // Compile time constant
 val hello: String = "World" // Runtime constant
@@ -128,7 +128,7 @@ Dry, clean, readable
 
 Kotlin
 
-```Kotlin
+```kotlin
 val file = File()
 ```
 
@@ -144,7 +144,7 @@ public static final File file = new File()
 
 ### [Primary constructor](https://kotlinlang.org/docs/reference/classes.html#constructors)
 
-```Kotlin
+```kotlin
 class Person(val name: String) { // Primary constructor in header
     constructor(name: String, parent: Person) : this(name) { // Secondary constructor
         ...
@@ -158,13 +158,13 @@ class Person(val name: String) { // Primary constructor in header
 
 Classes and functions are by default always final and must have open modifier to be inherited or overridden.
 
-```Kotlin
+```kotlin
 open class A {
     open fun foo(i: Int = 10) { }
 }
 ```
 
-```Kotlin
+```kotlin
 class B : A() {
     override fun foo(i: Int) {  }  // no default value allowed
 }
@@ -174,14 +174,14 @@ class B : A() {
 
 ### [Functions](https://kotlinlang.org/docs/reference/functions.html)
 
-```Kotlin
+```kotlin
 fun multiply(multiplicator: Int, multiplicand: Int): Int {
     return multiplicator * multiplicand
 }
 ```
 
 Usage
-```Kotlin
+```kotlin
 multiply(1,2)
 multiply(multiplicator = 1, multiplicand = 2)
 multiply(multiplicand = 2, multiplicator = 1)
@@ -192,6 +192,7 @@ multiply(multiplicand = 2, multiplicator = 1)
 @title[Null safe quote]
 
 > "I call it my billion-dollar mistake. It was the invention of the null reference in 1965."
+
 Sir Tony Hoare
 
 ---
@@ -232,7 +233,7 @@ public String getLastFour(Optional<Employee> employee) {
 
 Can be as one line single expression
 
-```Kotlin
+```kotlin
 fun getLastFour(employee: Employee?) = 
   employee?.address?.zip?.lastFour 
     ?: throw Exception("Missing data")
@@ -242,7 +243,7 @@ fun getLastFour(employee: Employee?) =
 
 ### Null safe Kotlin
 
-```Kotlin
+```kotlin
 var a: String = "abc"
 a = null // compilation error
 
@@ -252,7 +253,7 @@ b = null // ok
 
 Usage
 
-```Kotlin
+```kotlin
 val l = a.length // ok
 val l = b.length // error: variable 'b' can be null
 ```
@@ -263,13 +264,13 @@ val l = b.length // error: variable 'b' can be null
 
 Explicitly check if b is null
 
-```Kotlin
+```kotlin
 val l = if (b != null) b.length else -1
 ```
 
 Safe call operator, ?.
 
-```Kotlin
+```kotlin
 b?.length
 ```
 
@@ -279,7 +280,7 @@ b?.length
 
 ?:
 
-```Kotlin
+```kotlin
 val name = bob?.department?.head?.name ?: "Unknown"
 ```
 
@@ -289,7 +290,7 @@ val name = bob?.department?.head?.name ?: "Unknown"
 
 Throws an NPE if b is null
 
-```Kotlin
+```kotlin
 val l = b!!.length
 ```
 
@@ -299,13 +300,13 @@ val l = b!!.length
 
 Safe casts that return null
 
-```Kotlin
+```kotlin
 val aInt: Int? = a as? Int
 ```
 
 Smart cast, no ((String)x).length
 
-```Kotlin
+```kotlin
 fun demo(x: Any) {
     if (x is String) {
         print(x.length) // x is automatically cast to String
@@ -318,21 +319,21 @@ fun demo(x: Any) {
 ### Singletons & Extensions
 
 MySingleton.kt
-```Kotlin
+```kotlin
 object MySingleton { // Note object
     fun add(number: Int): Int = 10 + number
 }
 ```
 
 MySingleton+Extensions.kt
-```Kotlin
+```kotlin
 fun MySingleton.multiply(multiplicand: Int, multiplicator: Int) -> Int {
     return multiplicand * multiplicator
 }
 ```
 
 Usage
-```Kotlin
+```kotlin
 val sum = MySingleton.add(2)
 val product = MySingleton.multiply(1, 2)
 ```
@@ -341,7 +342,7 @@ val product = MySingleton.multiply(1, 2)
 
 ### [Range expressions](https://kotlinlang.org/docs/reference/ranges.html)
 
-```Kotlin
+```kotlin
 for (i in 1..4) print(i)     // prints "1234"
 for (i in 4..1)              // prints nothing
 for (i in 4 downTo 1)        // prints "4321"
@@ -357,7 +358,7 @@ for (i in 1 until 10)        // i in [1, 10), 10 is excluded
 We frequently create classes whose main purpose is to hold data. 
 In such a class some standard functionality and utility functions are often mechanically derivable from the data.
 
-```Kotlin
+```kotlin
 data class Person(val name: String, val age: Int)
 ```
 
@@ -367,7 +368,7 @@ equals(), hashCode(), toString(), copy()
 
 ### Data Classes and Destructuring Declarations
 
-```Kotlin
+```kotlin
 val jane = Person("Jane", 35) 
 val (name, age) = jane
 println("$name, $age years of age") // prints "Jane, 35 years of age"
@@ -375,9 +376,13 @@ println("$name, $age years of age") // prints "Jane, 35 years of age"
 
 +++
 
-### Java POJO equivalent to Kotlin data class
+### Java POJO
 
 ```kotlin
+data class Person(val name: String, val age: Int)
+```
+
+```java
 public class Person {
    private String name;
    private int age = 0;
@@ -437,7 +442,7 @@ public class Person {
 
 Traversing a map/list of pairs
 
-```Kotlin
+```kotlin
 for ((k, v) in map) {
     println("$k -> $v")
 }
@@ -447,7 +452,7 @@ for ((k, v) in map) {
 
 Execute if not null
 
-```Kotlin
+```kotlin
 val value = ...
 
 value?.let {
@@ -459,7 +464,7 @@ value?.let {
 
 Return on when statement
 
-```Kotlin
+```kotlin
 fun transform(color: String): Int {
     return when (color) {
         "Red" -> 0
@@ -483,7 +488,7 @@ fun transform(color: String) = when (color) {
 
 'if' expression
 
-```Kotlin
+```kotlin
 fun foo(i: Int) {
     val result = if (i == 1) {
         "one"
@@ -499,7 +504,7 @@ fun foo(i: Int) {
 
 Typealias
 
-```Kotlin
+```kotlin
 typealias JsonData = String
 typealias StatusCode = Int
 typealias Error = String
@@ -556,12 +561,6 @@ class MainActivity : AppCompatActivity() {
 
 ---
 
-@title[The End]
-
-Ok 👋
-
----
-
 @title[Links]
 
 [Frost Mobile Guide](https://github.com/FrostDigital/frost-mobile-guide)
@@ -571,3 +570,9 @@ Ok 👋
 ---
 
 ### [Lets see some code online](https://try.kotlinlang.org/#/Examples/Hello,%20world!/Reading%20a%20name%20from%20the%20command%20line/Reading%20a%20name%20from%20the%20command%20line.kt)
+
+@title[The End]
+
+Ok 👋
+
+---
