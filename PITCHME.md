@@ -327,6 +327,19 @@ val product = MySingleton.multiply(1, 2)
 
 ---
 
+### [Range expressions](https://kotlinlang.org/docs/reference/ranges.html)
+
+```Kotlin
+for (i in 1..4) print(i)     // prints "1234"
+for (i in 4..1)              // prints nothing
+for (i in 4 downTo 1)        // prints "4321"
+for (i in 1..4 step 2)       // prints "13"
+for (i in 4 downTo 1 step 2) // prints "42"
+for (i in 1 until 10)        // i in [1, 10), 10 is excluded
+```
+
+---
+
 ### Generics
 
 ```kotlin
