@@ -218,9 +218,12 @@ public String getLastFour(Optional<Employee> employee) {
 
 ### Null safe Kotlin 🚀
 
+Can be as one line single expression
+
 ```Kotlin
 fun getLastFour(employee: Employee?) = 
-  employee?.address?.zip?.lastFour ?: throw Exception("Missing data")
+  employee?.address?.zip?.lastFour 
+    ?: throw Exception("Missing data")
 ```
 
 ---
