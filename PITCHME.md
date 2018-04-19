@@ -83,4 +83,67 @@ public static final void main(String[] args) {
 
 ---
 
+@title[Kotlin variable syntax]
+
+```Kotlin
+// Explicit
+const val hello: String = "World" // Compile time constant
+val hello: String = "World" // Runtime constant
+var android: String = "Kotlin"
+
+// Implicit
+val hello = "World" // Runtime constant
+var android = "Kotlin"
+
+// Nullable ?
+var name: String? = null
+
+// Lateinit
+lateinit var name: String // Assign later in code, can't be null
+```
+
+---
+
+@title[Kotlin vs Java syntax]
+
+Dry, clean, readable
+
+Kotlin
+
+```Kotlin
+const val file = File()
+```
+
+Java
+
+```java
+static final File file = new File()
+```
+
+---
+
+@title[Null safe]
+
+
+
+---
+
+@title[Generics]
+
+```kotlin
+inline fun <reified T : Any> loadStyle(inputStream: InputStream): T {
+  return Gson().fromJson(InputStreamReader(inputStream), object : TypeToken<T>() {}.type)
+}
+```
+
+---
+
+@title[Links]
+
+[Frost Mobile Guide](https://github.com/FrostDigital/frost-mobile-guide)
+
+[Frost Android Kotlin Style Guide](https://github.com/FrostDigital/frost-mobile-guide/wiki/Frost-Android-Kotlin-Style-Guide)
+
+---
+
 ### [Lets see some code online](https://try.kotlinlang.org/#/Examples/Hello,%20world!/Reading%20a%20name%20from%20the%20command%20line/Reading%20a%20name%20from%20the%20command%20line.kt)
