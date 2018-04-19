@@ -571,8 +571,9 @@ class MainActivity : AppCompatActivity() {
 
 ### [Lets see some code online](https://try.kotlinlang.org/#/Examples/Hello,%20world!/Reading%20a%20name%20from%20the%20command%20line/Reading%20a%20name%20from%20the%20command%20line.kt)
 
+---
+
 @title[The End]
 
 Ok 👋
 
----
