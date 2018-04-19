@@ -46,13 +46,13 @@ Kotlin fixes a series of issues that Java suffers from
 
 ### More what Kotlin has that Java does not
 
-- Lambda expressions + Inline functions
-- First-class delegation
-- Type inference for variable and property types
-- Declaration-site variance & Type projections
-- Operator overloading
-- Separate interfaces for read-only and mutable collections
-- Coroutines
+- [Lambda expressions](https://kotlinlang.org/docs/reference/lambdas.html) + [Inline functions](https://kotlinlang.org/docs/reference/inline-functions.html)
+- [First-class delegation](https://kotlinlang.org/docs/reference/delegation.html)
+- [Type inference for variable and property types](https://kotlinlang.org/docs/reference/basic-types.html)
+- [Declaration-site variance & Type projections](https://kotlinlang.org/docs/reference/generics.html)
+- [Operator overloading](https://kotlinlang.org/docs/reference/operator-overloading.html)
+- [Separate interfaces for read-only and mutable collections](https://kotlinlang.org/docs/reference/collections.html)
+- [Coroutines](https://kotlinlang.org/docs/reference/coroutines.html)
 
 ---
 
