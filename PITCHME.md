@@ -184,7 +184,47 @@ Sir Tony Hoare
 
 ---
 
-### Null safe
+### Null safe Java
+
+```java
+public String getLastFour(Employee employee) {
+    if(employee != null) {
+        Address address = employee.getPrimaryAddress();
+        if(address != null) {
+            ZipCode zip = address.getZipCode();
+            if(zip != null) {
+                return zip.getLastFour()
+            }
+        }
+    }
+    throw new Exception("Missing data");
+}
+```
+
+---
+
+### Null safe Java 8
+
+```java
+public String getLastFour(Optional<Employee> employee) {
+    return employee.flatMap(employee -> employee.getPrimaryAddress())
+                   .flatMap(address -> address.getZipCode())
+                   .flatMap(zip -> zip.getLastFour())
+                   .orElseThrow(() -> new FMLException("Missing data"));
+}
+```
+
+---
+
+### Null safe Kotlin 🚀
+
+```Kotlin
+fun getLastFour(employee: Employee?) = employee?.address?.zip?.lastFour ?: throw Exception("Missing data")
+```
+
+---
+
+### Null safe Kotlin
 
 ```Kotlin
 var a: String = "abc"
