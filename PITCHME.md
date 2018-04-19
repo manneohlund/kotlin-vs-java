@@ -182,6 +182,36 @@ val name = bob?.department?.head?.name ?: "Unknown"
 
 ---
 
+### The !! Operator
+
+Throws an NPE if b is null
+
+```Kotlin
+val l = b!!.length
+```
+
+---
+
+### Safe & smart cast
+
+Safe casts that return null
+
+```Kotlin
+val aInt: Int? = a as? Int
+```
+
+Smart cast, no ((String)x).length
+
+```Kotlin
+fun demo(x: Any) {
+    if (x is String) {
+        print(x.length) // x is automatically cast to String
+    }
+}
+```
+
+---
+
 ### Generics
 
 ```kotlin
