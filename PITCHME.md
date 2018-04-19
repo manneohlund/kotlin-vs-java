@@ -212,6 +212,30 @@ fun demo(x: Any) {
 
 ---
 
+### Singletons & Extensions
+
+MyClass.kt
+```Kotlin
+object MyClass { // Note object
+    fun add(number: Int): Int = 10 + number
+}
+```
+
+MyClass+Extensions.kt
+```Kotlin
+fun MyClass.multiply(multiplicand: Int, multiplicator: Int) -> Int {
+    return multiplicand * multiplicator
+}
+```
+
+Usage
+```Kotlin
+val sum = MyClass.add(2)
+val product = MyClass.multiply(1, 2)
+```
+
+---
+
 ### Generics
 
 ```kotlin
