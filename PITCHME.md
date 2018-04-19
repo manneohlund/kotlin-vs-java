@@ -16,12 +16,12 @@ Kotlin fixes a series of issues that Java suffers from
 
 @ul
 
-- Null references are controlled by the type system.
-- No raw types
-- Arrays in Kotlin are invariant
-- Kotlin has proper function types, as opposed to Java's SAM-conversions
-- Use-site variance without wildcards
-- Kotlin does not have checked exceptions
+- [Null references are controlled by the type system](https://kotlinlang.org/docs/reference/null-safety.html)
+- [No raw types](https://kotlinlang.org/docs/reference/java-interop.html#java-generics-in-kotlin)
+- [Arrays in Kotlin are invariant](https://kotlinlang.org/docs/reference/basic-types.html#arrays)
+- [Kotlin has proper function types, as opposed to Java's SAM-conversions](https://kotlinlang.org/docs/reference/lambdas.html#function-types)
+- [Use-site variance without wildcards](https://kotlinlang.org/docs/reference/generics.html#use-site-variance-type-projections)
+- [Kotlin does not have checked exceptions](https://kotlinlang.org/docs/reference/exceptions.html#exceptions)
 
 @ulend
 
