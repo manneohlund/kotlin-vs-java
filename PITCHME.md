@@ -31,14 +31,14 @@ Kotlin fixes a series of issues that Java suffers from
 
 @ul
 
-- Null-safety
-- Smart casts
-- Singletons + Companion objects
-- Extension functions
-- Range expressions
-- Data classes
-- String templates
-- Other cool stuff 🍿
+- [Null-safety](https://kotlinlang.org/docs/reference/null-safety.html)
+- [Smart casts](https://kotlinlang.org/docs/reference/typecasts.html)
+- [Singletons + Companion objects](https://kotlinlang.org/docs/reference/object-declarations.html)
+- [Extension functions](https://kotlinlang.org/docs/reference/extensions.html)
+- [Range expressions](https://kotlinlang.org/docs/reference/ranges.html)
+- [Data classes](https://kotlinlang.org/docs/reference/data-classes.html)
+- [String templates](https://kotlinlang.org/docs/reference/basic-types.html#strings)
+- [Other cool stuff](https://kotlinlang.org/docs/reference/idioms.html) 🍿
 
 @ulend
 
