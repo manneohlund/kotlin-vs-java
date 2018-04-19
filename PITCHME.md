@@ -38,14 +38,19 @@ Kotlin fixes a series of issues that Java suffers from
 - Range expressions
 - Companion objects
 - Data classes
+
+@ulend
+
+---
+
+### More what Kotlin has that Java does not
+
 - First-class delegation
 - Type inference for variable and property types
 - Declaration-site variance & Type projections
 - Operator overloading
 - Separate interfaces for read-only and mutable collections
 - Coroutines
-
-@ulend
 
 ---
 
@@ -153,13 +158,13 @@ val l = b.length // error: variable 'b' can be null
 
 ### Checking for null in conditions
 
-First, you can explicitly check if b is null, and handle the two options separately.
+Explicitly check if b is null
 
 ```Kotlin
 val l = if (b != null) b.length else -1
 ```
 
-Your second option is the safe call operator, written ?.
+Safe call operator `?.`
 
 ```Kotlin
 val l = b?.length
