@@ -351,6 +351,8 @@ data class User(val name: String, val age: Int)
 
 +++
 
+### Data Classes and Destructuring Declarations
+
 ```Kotlin
 val jane = User("Jane", 35) 
 val (name, age) = jane
@@ -359,13 +361,94 @@ println("$name, $age years of age") // prints "Jane, 35 years of age"
 
 ---
 
-### Generics
+### Other cool stuff 🍿
+
+Traversing a map/list of pairs
+
+```Kotlin
+for ((k, v) in map) {
+    println("$k -> $v")
+}
+```
+
++++
+
+Execute if not null
+
+```Kotlin
+val value = ...
+
+value?.let {
+    ... // execute this block if not null
+}
+```
+
++++
+
+Return on when statement
+
+```Kotlin
+fun transform(color: String): Int {
+    return when (color) {
+        "Red" -> 0
+        "Green" -> 1
+        "Blue" -> 2
+        else -> throw IllegalArgumentException("Invalid color param value")
+    }
+}
+```
+or
+```kotlin
+fun transform(color: String) = when (color) {
+    "Red" -> 0
+    "Green" -> 1
+    "Blue" -> 2
+    else -> throw IllegalArgumentException("Invalid color param value")
+}
+```
+
++++
+
+'if' expression
+
+```Kotlin
+fun foo(i: Int) {
+    val result = if (i == 1) {
+        "one"
+    } else if (i == 2) {
+        "two"
+    } else {
+        "three"
+    }
+}
+```
+
++++
+
+Typealias
+
+```Kotlin
+typealias JsonData = String
+typealias StatusCode = Int
+typealias Error = String
+
+typealias Success = (JsonData) -> Unit
+typealias Error = (StatusCode, Error) -> Unit
+```
+
++++
+
+Generics
 
 ```kotlin
 inline fun <reified T : Any> loadStyle(inputStream: InputStream): T {
   return Gson().fromJson(InputStreamReader(inputStream), object : TypeToken<T>() {}.type)
 }
 ```
+
+---
+
+Ok 👋
 
 ---
 
