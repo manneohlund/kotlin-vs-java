@@ -6,6 +6,8 @@
 
 ### Why Kotlin?
 
+Less code, More readable, Smarter
+
 Kotlin fixes a series of issues that Java suffers from
 
 @ul
