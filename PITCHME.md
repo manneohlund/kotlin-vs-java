@@ -129,14 +129,16 @@ Dry, clean, readable
 Kotlin
 
 ```Kotlin
-const val file = File()
+val file = File()
 ```
 
 Java
 
 ```java
-static final File file = new File()
+public static final File file = new File()
 ```
+
+[Kotlin visibility modifiers](https://kotlinlang.org/docs/reference/visibility-modifiers.html#visibility-modifiers)
 
 ---
 
