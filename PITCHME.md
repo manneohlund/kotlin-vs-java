@@ -2,8 +2,6 @@
 
 ![Kotlin vs Java](https://github.com/manneohlund/kotlin-vs-java/blob/master/assets/kotlin-vs-java.png?raw=true)
 
-An language feature battle
-
 ---
 
 ### Why Kotlin?
