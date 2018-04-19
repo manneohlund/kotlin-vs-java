@@ -7,6 +7,7 @@ An language feature battle
 ---
 
 ### Why Kotlin?
+
 Kotlin fixes a series of issues that Java suffers from
 
 @ul
@@ -27,20 +28,20 @@ Kotlin fixes a series of issues that Java suffers from
 @ul
 
 - Null-safety
-- Lambda expressions + Inline functions = performant custom control structures
-- Extension functions
 - Smart casts
+- Extension functions
 - String templates
+- Singletons
+- Lambda expressions + Inline functions = performant custom control structures
 - Properties
 - Primary constructors
-- First-class delegation
-- Type inference for variable and property types
-- Singletons
-- Declaration-site variance & Type projections
 - Range expressions
-- Operator overloading
 - Companion objects
 - Data classes
+- First-class delegation
+- Type inference for variable and property types
+- Declaration-site variance & Type projections
+- Operator overloading
 - Separate interfaces for read-only and mutable collections
 - Coroutines
 
@@ -123,6 +124,9 @@ static final File file = new File()
 ---
 
 @title[Null safe]
+
+> "I call it my billion-dollar mistake. It was the invention of the null reference in 1965." // Sir Tony Hoare
+
 
 
 
