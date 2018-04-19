@@ -446,6 +446,44 @@ inline fun <reified T : Any> loadStyle(inputStream: InputStream): T {
 
 ---
 
+### Kotlin Android
+
+Java
+
+```Java
+public class MainActivity extends AppCompatActivity {
+ 
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       setSupportActionBar(toolbar);
+   }
+}
+```
+
++++
+
+Kotlin
+
+No findViewById or Butterknife needed
+
+```Java
+class MainActivity : AppCompatActivity() {
+ 
+   override fun onCreate(savedInstanceState: Bundle?) {
+       super.onCreate(savedInstanceState)
+       setContentView(R.layout.activity_main)
+       setSupportActionBar(toolbar)
+   }
+}
+```
+
+---
+
+@title[The End]
+
 Ok 👋
 
 ---
