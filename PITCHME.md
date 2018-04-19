@@ -32,7 +32,6 @@ Kotlin fixes a series of issues that Java suffers from
 - Extension functions
 - String templates
 - Singletons
-- Lambda expressions + Inline functions = performant custom control structures
 - Properties
 - Primary constructors
 - Range expressions
@@ -45,6 +44,7 @@ Kotlin fixes a series of issues that Java suffers from
 
 ### More what Kotlin has that Java does not
 
+- Lambda expressions + Inline functions
 - First-class delegation
 - Type inference for variable and property types
 - Declaration-site variance & Type projections
