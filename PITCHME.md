@@ -6,7 +6,11 @@
 
 ### Why Kotlin?
 
-Less code, More readable, Smarter
+Modern, Less code, More readable, Smarter
+
+---
+
+@title[Kotlin fixes]
 
 Kotlin fixes a series of issues that Java suffers from
 
