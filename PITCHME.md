@@ -86,6 +86,8 @@ public static final void main(String[] args) {
 
 @title[Kotlin variable syntax]
 
+val & var
+
 ```Kotlin
 // Explicit
 const val hello: String = "World" // Compile time constant
