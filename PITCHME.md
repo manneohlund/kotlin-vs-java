@@ -27,12 +27,12 @@ Kotlin fixes a series of issues that Java suffers from
 
 @ul
 
+- Properties
+- Primary constructors
 - Null-safety
 - Smart casts
 - Singletons
 - Extension functions
-- Properties
-- Primary constructors
 - Range expressions
 - Companion objects
 - Data classes
@@ -128,6 +128,53 @@ Java
 
 ```java
 static final File file = new File()
+```
+
+---
+
+### [Primary constructor](https://kotlinlang.org/docs/reference/classes.html#constructors)
+
+```Kotlin
+class Person(val name: String) { // Primary constructor in header
+    constructor(name: String, parent: Person) : this(name) { // Secondary constructor
+        ...
+    }
+}
+```
+
+---
+
+### Open & Override
+
+Classes and functions are by default always final and must have open modifier to be inherited or overridden.
+
+```Kotlin
+open class A {
+    open fun foo(i: Int = 10) { }
+}
+```
+
+```Kotlin
+class B : A() {
+    override fun foo(i: Int) {  }  // no default value allowed
+}
+```
+
+---
+
+### [Functions](https://kotlinlang.org/docs/reference/functions.html)
+
+```Kotlin
+fun multiply(multiplicator: Int, multiplicand: Int): Int {
+    return multiplicator * multiplicand
+}
+```
+
+Usage
+```Kotlin
+multiply(1,2)
+multiply(multiplicator = 1, multiplicand = 2)
+multiply(multiplicand = 2, multiplicator = 1)
 ```
 
 ---
