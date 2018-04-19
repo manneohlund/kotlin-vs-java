@@ -160,8 +160,14 @@ val l = b.length // error: variable 'b' can be null
 
 Explicitly check if b is null
 
+@ul
+
 ```Kotlin
 val l = if (b != null) b.length else -1
+```
+
+```Kotlin
+val l = b?.length ?: -1
 ```
 
 Safe call operator `?.`
@@ -170,7 +176,11 @@ Safe call operator `?.`
 val l = b?.length
 ```
 
+@ulend
+
 ---
+
+
 
 ### Generics
 
