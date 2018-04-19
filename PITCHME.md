@@ -160,16 +160,17 @@ val l = b.length // error: variable 'b' can be null
 
 Explicitly check if b is null
 
-@ul
+```Kotlin
+val l = if (b != null) b.length else -1
+```
 
-- Kotlin     | val l = if (b != null) b.length else -1
-- Kotlin     | val l = b?.length
+Safe call operator, ?.
 
-@ulend
+```Kotlin
+b?.length
+```
 
 ---
-
-
 
 ### Generics
 
