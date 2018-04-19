@@ -29,12 +29,12 @@ Kotlin fixes a series of issues that Java suffers from
 
 - Null-safety
 - Smart casts
-- Singletons
+- Singletons + Companion objects
 - Extension functions
 - Range expressions
-- Companion objects
 - Data classes
 - String templates
+- Other cool stuff 🍿
 
 @ulend
 
@@ -336,6 +336,25 @@ for (i in 4 downTo 1)        // prints "4321"
 for (i in 1..4 step 2)       // prints "13"
 for (i in 4 downTo 1 step 2) // prints "42"
 for (i in 1 until 10)        // i in [1, 10), 10 is excluded
+```
+
+---
+
+### [Data Classes](https://kotlinlang.org/docs/reference/data-classes.html)
+
+We frequently create classes whose main purpose is to hold data. 
+In such a class some standard functionality and utility functions are often mechanically derivable from the data.
+
+```Kotlin
+data class User(val name: String, val age: Int)
+```
+
++++
+
+```Kotlin
+val jane = User("Jane", 35) 
+val (name, age) = jane
+println("$name, $age years of age") // prints "Jane, 35 years of age"
 ```
 
 ---
