@@ -31,12 +31,12 @@ Kotlin fixes a series of issues that Java suffers from
 - Smart casts
 - Singletons
 - Extension functions
-- String templates
 - Properties
 - Primary constructors
 - Range expressions
 - Companion objects
 - Data classes
+- String templates
 
 @ulend
 
@@ -91,7 +91,7 @@ public static final void main(String[] args) {
 
 @title[Kotlin variable syntax]
 
-val & var
+val & var [Properties](https://kotlinlang.org/docs/reference/properties.html)
 
 ```Kotlin
 // Explicit
