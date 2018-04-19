@@ -71,6 +71,12 @@ Kotlin fixes a series of issues that Java suffers from
 
 ---
 
+### Kotlin is 100% interoperable with Java
+
+![Kotlin java](https://cdn-images-1.medium.com/max/1200/1*HYEQHnCinTfXmOV0TopK6A.jpeg)
+
+---
+
 @title[Syntax]
 
 Kotlin
